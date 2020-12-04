@@ -27,19 +27,30 @@ displayFeed = (feed) => {
 
         for (let i = 0; i < itemXMLLength; i++) {
             let li = document.createElement('li');
-            // li.className = "ListItem";
+            li.className = "ListItem";
             let HTML = `
             <h3>${itemXML[i].getElementsByTagName('title')[0].innerHTML}</h3> 
             <p>${itemXML[i].getElementsByTagName('description')[0].innerHTML}</p>
             <a href="${itemXML[i].getElementsByTagName('link')[0].innerHTML}">Plačiau</a>
             `
-            li.innerHTML = HTML
+            li.innerHTML += HTML
 
             list.appendChild(li)
         }
     }
+    setTimeout(function(){
+        loadXMLFeed();
+        startRefresh(itemXML);
+    },3600000)
+}
 
-
-
+startRefresh = (itemXMLData) => {
+    let listItem = document.getElementsByClassName('ListItem');
+    
+    for(i = 15; i<listItem.length; i++){
+        if(i < listItem.length) {
+            listItem[listItem.length].remove
+        }
+    }
 
 }
