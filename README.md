@@ -10,7 +10,7 @@ News aggregator that takes RSS feed from tv3.lt and shos all daily nes in one pl
 - Headline, description and link to full article provided
 
 
-![Screenshot](./img/Screen.PNG)
+![Screenshot](./img/Screen.png)
 
 
 
